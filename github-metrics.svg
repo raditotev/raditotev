@@ -944,7 +944,7 @@
                                 <div class="title">
                                     <span class="prefix"></span>
                                     Inspirer
-                                    <span class="gh">ranked 2.11m out of 313m repositories</span>
+                                    <span class="gh">ranked 2.11m out of 314m repositories</span>
                                 </div>
                                 <div class="text">Maintaining or created a repository which has been forked 3 times</div>
                             </div>
@@ -1107,7 +1107,7 @@
             </section>
             <footer>
                 <span>These metrics do not include all private contributions</span>
-                <span>Last updated 12 Jun 2022, 07:21:55 (timezone Europe/London) with lowlighter/metrics@3.24.0</span>
+                <span>Last updated 12 Jun 2022, 08:16:24 (timezone Europe/London) with lowlighter/metrics@3.24.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
