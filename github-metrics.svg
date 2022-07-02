@@ -1204,7 +1204,7 @@ Use refetchQueries in order to update projects and clients on the home page</div
             </section>
             <footer>
                 <span>These metrics do not include all private contributions</span>
-                <span>Last updated 2 Jul 2022, 11:19:15 (timezone Europe/London) with lowlighter/metrics@3.25.0</span>
+                <span>Last updated 2 Jul 2022, 12:14:56 (timezone Europe/London) with lowlighter/metrics@3.25.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
