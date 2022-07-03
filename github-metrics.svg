@@ -1044,7 +1044,7 @@ Use refetchQueries in order to update projects and clients on the home page</div
                                 <div class="title">
                                     <span class="prefix"></span>
                                     Inspirer
-                                    <span class="gh">ranked 2.11m out of 321m repositories</span>
+                                    <span class="gh">ranked 2.12m out of 321m repositories</span>
                                 </div>
                                 <div class="text">Maintaining or created a repository which has been forked 3 times</div>
                             </div>
@@ -1207,7 +1207,7 @@ Use refetchQueries in order to update projects and clients on the home page</div
             </section>
             <footer>
                 <span>These metrics do not include all private contributions</span>
-                <span>Last updated 3 Jul 2022, 02:54:35 (timezone Europe/London) with lowlighter/metrics@3.25.0</span>
+                <span>Last updated 3 Jul 2022, 04:36:38 (timezone Europe/London) with lowlighter/metrics@3.25.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
