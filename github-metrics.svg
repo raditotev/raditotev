@@ -94,7 +94,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path fill-rule="evenodd" d="M2.75 2.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h2a.75.75 0 01.75.75v2.19l2.72-2.72a.75.75 0 01.53-.22h4.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25H2.75zM1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0113.25 12H9.06l-2.573 2.573A1.457 1.457 0 014 13.543V12H2.75A1.75 1.75 0 011 10.25v-7.5z"/>
                             </svg>
-                            78 issue comments
+                            79 issue comments
                         </div>
                     </section>
                     <section>
@@ -441,6 +441,41 @@
                                 <div class="details">
                                     <div>opened by Sboonny in <span class="repo">freeCodeCamp/freeCodeCamp</span></div>
                                     <div class="comment">
+                                        There are two conditions to be fulfilled for this test:
+
+User should use variable instead of string
+Variable should be constant
+I think the more declarative approach would be the following:
+                                        <code class="language-multiline language-js" xml:space="preserve"><span class="token function">assert</span><span class="token punctuation">(</span><span class="token constant">LOGIN</span> <span class="token operator">===</span> <span class="token string">'LOGIN'</span> <span class="token operator">&amp;&amp;</span> <span class="token constant">LOGOUT</span> <span class="token operator">===</span> <span class="token string">'LOGOUT'</span><span class="token punctuation">)</span> <span class="token comment">// fulfils No. 1</span>
+<span class="token function">assert</span><span class="token punctuation">(</span>noWhiteSpace<span class="token punctuation">.</span><span class="token method function property-access">includes</span><span class="token punctuation">(</span><span class="token string">'const'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// fulfils No.2</span>
+<span class="token trimmed">(2 more lines were trimmed)</span></code>
+                                        I think the above will work without being too implicit regarding the solution.
+I would say the last  two
+                                        <code>assert.isNotOk</code>
+                                        could even be omitted because there is always a slim chance someone might write 
+ unconsciously  some comment that might contain
+                                        <code>let</code>
+                                        or
+                                        <code>var</code>
+                                        as substrings.
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="row fill-width">
+                            <section class="activity">
+                                <div class="field">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                        <path fill-rule="evenodd" d="M2.75 2.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h2a.75.75 0 01.75.75v2.19l2.72-2.72a.75.75 0 01.53-.22h4.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25H2.75zM1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0113.25 12H9.06l-2.573 2.573A1.457 1.457 0 014 13.543V12H2.75A1.75 1.75 0 011 10.25v-7.5z"/>
+                                    </svg>
+                                    <div class="content">
+                                        Commented on
+                                        <span class="issue">#46776 (FEL): redux use const for action types doesn't accept a valid answer</span>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <div>opened by Sboonny in <span class="repo">freeCodeCamp/freeCodeCamp</span></div>
+                                    <div class="comment">
                                         I have tried this as well but it doesn't work. In the test reassigning the value of any of the constants doesn't throw, e.g.:
                                         <code class="language-multiline language-js" xml:space="preserve"><span class="token keyword control-flow">try</span> <span class="token punctuation">{</span>
   <span class="token constant">LOGIN</span> <span class="token operator">=</span> <span class="token string">"LOGOUT"</span>
@@ -512,29 +547,6 @@ For some reason the JS test runner allows constants to change.</i>
                                         </i>
                                         I am sorry @lulululu12345, I must have missed your comment. You suggestion is sound and it will further increase the reliability of the test but in my opinion there will always be edge cases where this test will fail unless we move away from regex.
 Thanks again for your contribution 👍
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                        <div class="row fill-width">
-                            <section class="activity">
-                                <div class="field">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                        <path fill-rule="evenodd" d="M2.75 2.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h2a.75.75 0 01.75.75v2.19l2.72-2.72a.75.75 0 01.53-.22h4.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25H2.75zM1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0113.25 12H9.06l-2.573 2.573A1.457 1.457 0 014 13.543V12H2.75A1.75 1.75 0 011 10.25v-7.5z"/>
-                                    </svg>
-                                    <div class="content">
-                                        Commented on
-                                        <span class="issue">#46753 fix(curriculum): update test to accept array destructuring</span>
-                                    </div>
-                                </div>
-                                <div class="details">
-                                    <div>opened by lulululu12345 in <span class="repo">freeCodeCamp/freeCodeCamp</span></div>
-                                    <div class="comment">
-                                        <i>
-                                            I don't see the point in that line as well
-                                            <i>const noWhiteSpace = __helpers.removeWhiteSpace(code);</i>
-                                        </i>
-                                        @Sboonny this helper removes all white space from the code under test, so that it doesn't have to be taken into consideration within the regex.
                                     </div>
                                 </div>
                             </section>
@@ -1128,7 +1140,7 @@ Thanks again for your contribution 👍
             </section>
             <footer>
                 <span>These metrics do not include all private contributions</span>
-                <span>Last updated 9 Jul 2022, 19:20:56 (timezone Europe/London) with lowlighter/metrics@3.25.0</span>
+                <span>Last updated 9 Jul 2022, 20:14:49 (timezone Europe/London) with lowlighter/metrics@3.25.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
