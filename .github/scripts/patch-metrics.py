@@ -1,5 +1,7 @@
 """Patch stalomeow/metrics action to fix bugs caused by GitHub API returning
-undefined/null values in PushEvent commit payloads."""
+undefined/null values in PushEvent commit payloads, and to fix the most-used
+languages section not showing data for users whose owned repositories have no
+GitHub-detected language data."""
 
 
 def patch_file(path, replacements):
@@ -43,6 +45,28 @@ patch_file(
         (
             '.filter(({author}) => data.shared["commits.authoring"]',
             '.filter(commit => commit && commit.author).filter(({author}) => data.shared["commits.authoring"]',
+        ),
+    ],
+)
+
+# Fix languages plugin:
+# Bug: most-used section shows no languages for users whose owned repos have no
+#      GitHub-detected language data (e.g. profile repos with only YAML/Markdown/SVG).
+# Cause: the stats loop only iterates over data.user.repositories.nodes (owned repos),
+#        while repositoriesContributedTo.nodes (contributed repos) is already available
+#        in the in-scope `repositories` variable used for the unique count. Using the
+#        combined list ensures the most-used section reflects the user's actual language
+#        usage, consistent with how the unique count is already computed.
+patch_file(
+    ".metrics-action/source/plugins/languages/index.mjs",
+    [
+        (
+            "console.debug(`metrics/compute/${login}/plugins > languages > processing ${data.user.repositories.nodes.length} repositories`)",
+            "console.debug(`metrics/compute/${login}/plugins > languages > processing ${repositories.length} repositories`)",
+        ),
+        (
+            "for (const repository of data.user.repositories.nodes) {",
+            "for (const repository of repositories) {",
         ),
     ],
 )
