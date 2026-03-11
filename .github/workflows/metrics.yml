@@ -12,7 +12,20 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: stalomeow/metrics@projects-v2 # lowlighter/metrics@main
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Checkout metrics action
+        uses: actions/checkout@v4
+        with:
+          repository: stalomeow/metrics
+          ref: projects-v2
+          path: .metrics-action
+
+      - name: Fix activity and habits plugin bugs
+        run: python3 .github/scripts/patch-metrics.py
+
+      - uses: ./.metrics-action
         with:
           # Your GitHub token
           # The following scopes are required:
