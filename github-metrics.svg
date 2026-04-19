@@ -383,7 +383,7 @@
                                     </svg>
                                     <div class="content">
                                         Starred
-                                        <span class="repo">multica-ai/andrej-karpathy-skills</span>
+                                        <span class="repo">forrestchang/andrej-karpathy-skills</span>
                                     </div>
                                 </div>
                             </section>
@@ -849,7 +849,7 @@
             </section>
             <footer>
                 <span>These metrics do not include all private contributions</span>
-                <span>Last updated 19 Apr 2026, 18:23:59 (timezone Europe/London) with lowlighter/metrics@3.35.0-beta</span>
+                <span>Last updated 19 Apr 2026, 20:27:27 (timezone Europe/London) with lowlighter/metrics@3.35.0-beta</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
