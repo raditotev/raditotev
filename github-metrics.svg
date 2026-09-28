@@ -485,7 +485,7 @@
                                 <div class="title">
                                     <span class="prefix">Master</span>
                                     developer
-                                    <span class="gh">ranked 217k out of 246m users</span>
+                                    <span class="gh">ranked 218k out of 246m users</span>
                                 </div>
                                 <div class="text">Published 113 public repositories</div>
                             </div>
@@ -829,7 +829,7 @@
             </section>
             <footer>
                 <span>These metrics do not include all private contributions</span>
-                <span>Last updated 28 Sept 2026, 01:23:51 (timezone Europe/London) with lowlighter/metrics@3.35.0-beta</span>
+                <span>Last updated 28 Sept 2026, 07:26:25 (timezone Europe/London) with lowlighter/metrics@3.35.0-beta</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
